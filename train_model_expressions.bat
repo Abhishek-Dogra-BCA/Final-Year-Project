@@ -1,0 +1,1 @@
+D:\Media\Education\Project\opencv-face-recognition\train_model_expressions.py -e D:\Media\Education\Project\opencv-face-recognition\output\embeddings_expressions.pickle -r D:\Media\Education\Project\opencv-face-recognition\output\recognizer_expressions.pickle -l D:\Media\Education\Project\opencv-face-recognition\output\le_expressions.pickle 

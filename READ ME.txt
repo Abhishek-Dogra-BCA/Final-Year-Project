@@ -1,0 +1,48 @@
+THE PROJECT IS INITIALIZED THROUGH THE USE OF CMD/TERMINAL
+
+BELOW ARE THE PATHS FOR EACH OF THE REQUIRED FILES IN THE PROJECT.
+
+
+1. EXTRACT EMBEDDINGS
+
+2. TRAIN MODEL
+
+3. EXPRESSION RECOGNITION
+
+
+CHANGE THE PATHS ACCORDING TO YOUR LOCATION
+
+
+build data set:
+
+D:\Media\Education\Project\opencv-face-recognition\build_face_dataset_count_db.py -c D:\Media\Education\Project\opencv-face-recognition\haarcascade_frontalface_default.xml -o D:\Media\Education\Project\opencv-face-recognition\dataset\abhishek
+
+
+Extract Embeddings:
+
+D:\Media\Education\Project\opencv-face-recognition\extract_embeddings.py -i D:\Media\Education\Project\opencv-face-recognition\dataset -e D:\Media\Education\Project\opencv-face-recognition\output\embeddings.pickle -d D:\Media\Education\Project\opencv-face-recognition\face_detection_model -m D:\Media\Education\Project\opencv-face-recognition\openface_nn4.small2.v1.t7
+
+
+train_model:
+
+D:\Media\Education\Project\opencv-face-recognition\train_model.py -e D:\Media\Education\Project\opencv-face-recognition\output\embeddings.pickle -r D:\Media\Education\Project\opencv-face-recognition\output\recognizer.pickle -l D:\Media\Education\Project\opencv-face-recognition\output\le.pickle 
+
+
+video face recognition:
+
+D:\Media\Education\Project\opencv-face-recognition\recognize_video_db.py -d D:\Media\Education\Project\opencv-face-recognition\face_detection_model -m D:\Media\Education\Project\opencv-face-recognition\openface_nn4.small2.v1.t7 -r1 D:\Media\Education\Project\opencv-face-recognition\output\recognizer.pickle -r2 D:\Media\Education\Project\opencv-face-recognition\output\recognizer_expressions.pickle -l1 D:\Media\Education\Project\opencv-face-recognition\output\le.pickle -l2 D:\Media\Education\Project\opencv-face-recognition\output\le_expressions.pickle -c 0.5
+
+
+Extract Embeddings expressions:
+
+D:\Media\Education\Project\opencv-face-recognition\extract_embeddings_expressions.py -i D:\Media\Education\Project\opencv-face-recognition\dataset_expressions -e D:\Media\Education\Project\opencv-face-recognition\output\embeddings_expressions.pickle -d D:\Media\Education\Project\opencv-face-recognition\face_detection_model -m D:\Media\Education\Project\opencv-face-recognition\openface_nn4.small2.v1.t7
+
+
+train_model expressions:
+
+D:\Media\Education\Project\opencv-face-recognition\train_model_expressions.py -e D:\Media\Education\Project\opencv-face-recognition\output\embeddings_expressions.pickle -r D:\Media\Education\Project\opencv-face-recognition\output\recognizer_expressions.pickle -l D:\Media\Education\Project\opencv-face-recognition\output\le_expressions.pickle 
+
+
+build data set expressions:
+
+D:\Media\Education\Project\opencv-face-recognition\build_face_dataset_count_db.py -c D:\Media\Education\Project\opencv-face-recognition\haarcascade_frontalface_default.xml -o D:\Media\Education\Project\opencv-face-recognition\dataset_expressions\frowning
